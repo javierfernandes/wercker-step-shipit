@@ -35,10 +35,10 @@ set_cwd
 # assembly shipit_command like `shipit staging deploy --cmd 'run build'``
 
 
-shipit_command="$shipit_command $SHIPIT_RUN_ENVIRONMENT $SHIPIT_RUN_TASK"
+shipit_command="$shipit_command $WERCKER_SHIPIT_RUN_ENVIRONMENT $WERCKER_SHIPIT_RUN_TASK"
 
 if [ -n "$SHIPIT_RUN_CMD" ] ; then
-    shipit_command="$shipit_command --cmd $SHIPIT_RUN_CMD"
+    shipit_command="$shipit_command --cmd $WERCKER_SHIPIT_RUN_CMD"
 fi
 
 # now run

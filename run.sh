@@ -8,6 +8,7 @@ check-params() {
   # if [ ! -n "$WERCKER_NPM_RUN_SCRIPT" ]; then
   #   fail 'Please provide a script to run'
   # fi
+  true;
 }
 
 if ! type shipit &> /dev/null ; then

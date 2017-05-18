@@ -4,6 +4,14 @@ set_cwd() {
   cd "$WERCKER_ROOT"
 }
 
+function npm_package_is_installed {
+  if [ $(npm list --depth 0 --parseable true "${2}" | grep "${1}$") ]; then
+    echo "1"
+  else
+    echo "0"
+  fi
+}
+
 check-params() {
   # if [ ! -n "$WERCKER_NPM_RUN_SCRIPT" ]; then
   #   fail 'Please provide a script to run'

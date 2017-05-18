@@ -1,0 +1,16 @@
+name: shipit-run 
+version: 0.0.1
+description: Run shipitjs scripts .
+keywords:
+  - shipit
+  - node
+properties:
+  environment:
+    type: string
+    required: true
+  task:
+    type: string
+    required: true
+  cmd:
+    type: string
+    required: false

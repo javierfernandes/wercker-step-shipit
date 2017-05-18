@@ -13,7 +13,7 @@ check-params() {
 
 if ! type shipit &> /dev/null ; then
     # Check if it is in the local node_modules repo
-    if ! $(npm_package_is_installed shipit-cli) ; then
+    if ! npm_package_is_installed shipit-cli ; then
         info "shipit is not installed, trying to install it through npm"
         fail "shipit not found, make sure you have shipit-cli as a project dependency in package.json"
     else

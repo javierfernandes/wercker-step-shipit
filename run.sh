@@ -1,4 +1,6 @@
 #!/bin/bash
+# shellcheck disable=SC2046
+# shellcheck disable=SC2143
 
 set_cwd() {
   cd "$WERCKER_ROOT"
